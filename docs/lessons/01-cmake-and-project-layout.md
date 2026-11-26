@@ -48,3 +48,8 @@ cmake --build build
 
 1. 改一句打印文字，重新 `cmake --build build`，能看到新输出吗？
 2. 不用清掉整个 `build/`，改源码后一般只需再 build。
+
+### 参考答案
+
+1. **能。** 改的是源码，重新 build 会重编并链出新可执行文件，再运行就能看到新文字。CLion 里点运行通常也会先自动 build。
+2. **对。** `build/` 是生成目录；改 `.cpp` 后增量编译即可。只有大改 CMake、换工具链或配置坏了时，才需要清 `build/` 或 Reload CMake。
