@@ -8,22 +8,23 @@
 |------|------|------|
 | `stage01-skeleton/` | 1 | CMake + Hello |
 | `stage02-frame/` | 2 | `Frame` 契约 + 打印演示帧 |
+| `stage03-source/` | 3 | 模拟源 `SimulatedSource`（class）按节拍产出帧 |
 | `docs/lessons/` | — | 课笔记（含自测参考答案） |
 
-后续阶段会继续新增 `stage03-*` 等目录，互不覆盖。
+后续阶段会继续新增 `stage04-*` 等目录，互不覆盖。
 
 ## 用 CLion
 
 1. **File → Open**
-2. 选某一个阶段目录，例如 `…/programlearn/stage02-frame`（该目录内必须能看到 `CMakeLists.txt`）
+2. 选某一个阶段目录，例如 `…/programlearn/stage03-source`（该目录内必须能看到 `CMakeLists.txt`）
 3. 等 CMake 加载完成，运行配置选 `sensor_pipeline`
 
 不要 Open 仓库根目录：根上没有面向整仓的 `CMakeLists.txt`。
 
-## 命令行示例（阶段 2）
+## 命令行示例（阶段 3）
 
 ```bash
-cd stage02-frame
+cd stage03-source
 cmake -S . -B build
 cmake --build build
 ./build/sensor_pipeline
